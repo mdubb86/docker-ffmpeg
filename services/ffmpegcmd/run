@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv /bin/bash
+echo 'Running ffmpeg command'
+IFS=', ' read -r -a array <<< "$string"
+echo $CMD
+exec ffmpeg "${CMD[@]}"
+

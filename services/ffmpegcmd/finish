@@ -1,0 +1,2 @@
+#!/bin/bash
+echo 'ffmpeg command exited... restarting'
