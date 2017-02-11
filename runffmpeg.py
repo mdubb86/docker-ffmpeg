@@ -16,7 +16,7 @@ signal.signal(signal.SIGQUIT, signal_handler)
 signal.signal(signal.SIGCONT, signal_handler)
 
 args = shlex.split(os.environ['CMD'])
-print 'Args', list(args))
+print 'Args:' + str(list(args))
 p = subprocess.Popen(['ffmpeg'] + args)
 p.wait()
 

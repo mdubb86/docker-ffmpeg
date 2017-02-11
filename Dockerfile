@@ -51,8 +51,6 @@ RUN cd ~/ffmpeg_sources && \
   make install && \
   make distclean
 
-RUN apt-get install -y libmp3lame-dev
-
 RUN cd ~/ffmpeg_sources && \
   wget http://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 && \
   tar xjvf ffmpeg-snapshot.tar.bz2 && \
