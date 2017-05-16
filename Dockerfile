@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y \
   libfaac-dev \
   mediainfo \
   libmp3lame-dev \
+  libasound2-dev \
   python \
   vim
 
