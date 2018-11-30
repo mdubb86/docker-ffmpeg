@@ -34,6 +34,15 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir ~/ffmpeg_sources
 
 RUN cd ~/ffmpeg_sources && \
+  wget https://www.nasm.us/pub/nasm/releasebuilds/2.14/nasm-2.14.tar.gz && \
+  tar xvf nasm-2.14.tar.gz && \
+  cd nasm* && \
+  ./configure && \
+  make && \
+  make install && \
+  nasm --version
+
+RUN cd ~/ffmpeg_sources && \
   wget http://download.videolan.org/pub/x264/snapshots/last_x264.tar.bz2 && \
   tar xjvf last_x264.tar.bz2 && \
   cd x264-snapshot* && \
