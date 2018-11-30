@@ -1,4 +1,6 @@
 #!/usr/bin/with-contenv /bin/bash
 echo 'Starting ffmpeg'
+test -f /env && source /env
+test -f /env && export $(cut -d= -f1 /env)
 exec python /root/runffmpeg.py
 
